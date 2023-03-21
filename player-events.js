@@ -1,10 +1,9 @@
 'use strict';
 
-const { Config, Broadcast: B } = require('ranvier');
+const { Config, Broadcast: B } = require('whispermud');
 const Combat = require('./lib/Combat');
 const CombatErrors = require('./lib/CombatErrors');
-const LevelUtil = require('../bundle-example-lib/lib/LevelUtil');
-const WebsocketStream = require('../websocket-networking/lib/WebsocketStream');
+const LevelUtil = require('../whispermud-lib/lib/LevelUtil');
 
 /**
  * Auto combat module
@@ -31,14 +30,12 @@ module.exports = {
 
       const usingWebsockets = this.socket instanceof WebsocketStream;
       // don't show the combat prompt to a websockets server
-      if (!this.hasPrompt('combat') && !usingWebsockets) {
+      if (!this.hasPrompt('combat')) {
         this.addPrompt('combat', _ => promptBuilder(this));
       }
 
       B.sayAt(this, '');
-      if (!usingWebsockets) {
-        B.prompt(this);
-      }
+      B.prompt(this);
     },
 
     /**
@@ -237,7 +234,7 @@ module.exports = {
      killed: state => {
        const startingRoomRef = Config.get('startingRoom');
        if (!startingRoomRef) {
-         Logger.error('No startingRoom defined in ranvier.json');
+         Logger.error('No startingRoom defined in whispermud.json');
        }
 
        return function (killer) {

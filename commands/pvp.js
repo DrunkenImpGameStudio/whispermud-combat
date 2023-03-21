@@ -1,6 +1,6 @@
 'use strict';
 
-const Ranvier = require('ranvier');
+const Ranvier = require('whispermud');
 const { Broadcast } = Ranvier;
 
 module.exports = {

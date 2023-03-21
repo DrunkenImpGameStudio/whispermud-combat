@@ -2,7 +2,7 @@
 
 const Combat = require('../lib/Combat');
 const CombatErrors = require('../lib/CombatErrors');
-const { Broadcast: B, Logger } = require('ranvier');
+const { Broadcast: B, Logger } = require('whispermud');
 
 module.exports = {
   usage: 'consider <target>',

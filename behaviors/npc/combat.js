@@ -51,7 +51,7 @@ module.exports = () => {
         }
       }
 
-      // refer to bundles/ranvier-combat/player-events.js for a further list of combat events
+      // refer to bundles/whispermud-combat/player-events.js for a further list of combat events
     }
   };
 };
