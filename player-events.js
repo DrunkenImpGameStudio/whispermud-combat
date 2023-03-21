@@ -1,6 +1,6 @@
 'use strict';
 
-const { Config, Broadcast: B } = require('whispermud');
+const { Config, Broadcast: B } = require('whispermud-core');
 const Combat = require('./lib/Combat');
 const CombatErrors = require('./lib/CombatErrors');
 const LevelUtil = require('../whispermud-lib/lib/LevelUtil');

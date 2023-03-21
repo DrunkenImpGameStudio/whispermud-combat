@@ -1,7 +1,7 @@
 'use strict';
 
 const { Random } = require('rando-js');
-const { Broadcast } = require('whispermud');
+const { Broadcast } = require('whispermud-core');
 const { CommandParser } = require('../../whispermud-lib/lib/CommandParser');
 const say = Broadcast.sayAt;
 

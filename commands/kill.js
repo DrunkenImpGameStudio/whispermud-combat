@@ -1,6 +1,6 @@
 'use strict';
 
-const Ranvier = require('whispermud');
+const Ranvier = require('whispermud-core');
 const B = Ranvier.Broadcast;
 const Logger = Ranvier.Logger;
 
