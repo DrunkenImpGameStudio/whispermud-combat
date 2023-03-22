@@ -28,7 +28,6 @@ module.exports = {
         return;
       }
 
-      const usingWebsockets = this.socket instanceof WebsocketStream;
       // don't show the combat prompt to a websockets server
       if (!this.hasPrompt('combat')) {
         this.addPrompt('combat', _ => promptBuilder(this));
